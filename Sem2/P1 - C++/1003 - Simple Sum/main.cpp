@@ -1,10 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 int main (){
-	int A {};
-	int B {};
-	std::cin >> A >> B;
-	std::cout << "SOMA = " << A + B < "\n";
+	int a {};
+	int b {};
+	std::cin >> a >> b;
+	std::cout << "SOMA = " << a + b << "\n";
 
 return 0;
 

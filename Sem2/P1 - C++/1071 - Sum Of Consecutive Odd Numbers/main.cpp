@@ -1,27 +1,27 @@
-#include <stdio.h>
 #include <bits/stdc++.h>
 int main() {
- 
-  int x, y;
-  int maior, menor;
-  std::cin >> x  >> y;
-  if (x > y){
-      maior = x;
-      menor = y;
+
+  int x{}, y{};
+  int big, small;
+  std::cin >> x >> y;
+
+  if (x > y) {
+    big = x;
+    small = y;
   }
-  if (x<y) {
-      maior = y;
-      menor = x;
+  if (x < y) {
+    big = y;
+    small = x;
   }
-  
-    int imp = 0;
-    for(int i = menor + 1; i < maior; i++){
-        if (i%2!=0){
-            imp+=i;
-        }
+
+  int imp = 0;
+  for (int i = small + 1; i < big; i++) {
+    if (i % 2 != 0) {
+      imp += i;
     }
+  }
 
-    std::cout << imp << "\n";
+  std::cout << imp << "\n";
 
-    return 0;
+  return 0;
 }

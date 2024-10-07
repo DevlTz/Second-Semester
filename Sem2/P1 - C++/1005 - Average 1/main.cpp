@@ -1,9 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
-int main(int argc, char* argv[]){
-
-    double a {}, b{};
+int main() {
+    double a{}, b{};
     std::cin >> a >> b;
-    std::cout << "MEDIA = " << ((a*3.5)+(b*7.5))/11 <<"\n";
-
-    }
+    double average = ((a * 3.5) + (b * 7.5)) / 11;
+    std::cout << std::fixed << std::setprecision(5);
+    std::cout << "MEDIA = " << average << "\n";
+    return 0;
+}

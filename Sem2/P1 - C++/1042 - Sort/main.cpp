@@ -1,15 +1,27 @@
 #include <bits/stdc++.h>
 
-int main(int argc, char* argv[]){
-    int n;
-    std::cin >> n;
-    std::cout << n << "\n";
-    std::cout << n/100 << " nota(s) de R$ 100,00" << "\n";
-    std::cout << n%100/50 << " nota(s) de R$ 50,00" << "\n";
-    std::cout << n%100%50/20 << " nota(s) de R$ 20,00" << "\n";
-    std::cout << n%100%50%20/10 << " nota(s) de R$ 10,00" << "\n";
-    std::cout << n%100%50%20%10/5 << " nota(s) de R$ 5,00" << "\n";
-    std::cout << n%100%50%20%10%5/2 << " nota(s) de R$ 2,00" << "\n";
-    std::cout << n%100%50%20%10%5%2/1 << " nota(s) de R$ 1,00" << "\n";
+int main() {
+    int a{}, b{}, c{};
+    std::cin >> a >> b >> c;
+    int x = a, y = b, z = c;
 
+    if (a > b) {
+        std::swap(a, b);
+    }
+    if (a > c) {
+        std::swap(a, c);
+    }
+    if (b > c) {
+        std::swap(b, c);
+    }
+
+    std::cout << a << "\n";
+    std::cout << b << "\n";
+    std::cout << c << "\n";
+    std::cout << "\n";
+    std::cout << x << "\n";
+    std::cout << y << "\n";
+    std::cout << z << "\n";
+
+    return 0;
 }

@@ -2,15 +2,10 @@
 
 int main (){
 
-	double a {};
-	double b {};
+	double a {}, b {};
 	std::cin >> a >> b;
-
-	double PROD = a * b;
-
-	
-	std::cout << "PROD = " << PROD << "\n";
-
+	double prod = a * b;
+	std::cout << "PROD = " << prod << "\n";
 
 return 0;
 

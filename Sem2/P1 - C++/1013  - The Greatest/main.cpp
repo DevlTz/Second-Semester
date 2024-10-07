@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 
 int main(int argc, char* argv[]){
-  int a, b, c, maior=0;
+  int a, b, c, big=0;
     std::cin >> a >> b >> c;   
-    maior = (a+b+abs(a-b))/2;
-    maior = (maior+c+abs(maior-c))/2;
-    std::cout << maior << " eh o maior" << "\n";
+    big = (a+b+abs(a-b))/2;
+    big = (big+c+abs(big-c))/2;
+    std::cout << big << " eh o maior" << "\n";
 }
