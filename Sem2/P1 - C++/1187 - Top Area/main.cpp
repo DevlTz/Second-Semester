@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 int main() {
-  double arr[12][12]{}, sum{};
+  double arr[12][12], sum{};
   int count{};
   char operation{};
 
@@ -13,14 +13,14 @@ int main() {
     }
   }
 
-  for (int i{1}; i < 12; ++i) {
-    for (int j{0}; j < 12 - i; ++j) {
+  for (int i{}; i < 5; ++i) {
+    for (int j{i + 1}; j < 11 - i; ++j) {
       sum += arr[i][j];
       ++count;
     }
   }
 
-  double result = (operation == 'S') ? sum : sum / count;
+  double result = (operation == 'S') ? sum : (count > 0 ? sum / count : 0);
 
   std::cout << std::fixed << std::setprecision(1) << result << "\n";
 
