@@ -32,7 +32,7 @@ std::string to_string(const std::array<value_t, sz> &arr, index_t l,
 template <std::size_t sz>
 int binary_search(const std::array<value_t, sz> &arr, value_t target, index_t l,
                   index_t r) {
-  while (l <= r || r >=l) {
+  while (l <= r) {
     int  mid = (l + r) / 2;
   if(arr[mid]==target){
     return mid;
@@ -51,16 +51,31 @@ return -1;
 /// Execute a recursive binary search on an array.
 template <std::size_t sz>
 int binary_search_rec(const std::array<value_t, sz> &arr, value_t target,
-                      index_t l, index_t r) {
-  // TODO
+            index_t l, index_t r) {
+  if (l > r) {
   return -1;
+  }
+
+  int mid = (l + r) / 2;
+
+  if (arr[mid] == target) {
+  return mid;
+  } else if (target < arr[mid]) {
+  return binary_search_rec(arr, target, l, mid - 1);
+  } else {
+  return binary_search_rec(arr, target, mid + 1, r);
+  }
 }
 
 /// Execute a linear search on an array.
 template <std::size_t sz>
 int linear_search(const std::array<value_t, sz> &arr, value_t target, index_t l,
-                  index_t r) {
-  // TODO
+          index_t r) {
+  for (index_t i = l; i <= r; ++i) {
+  if (arr[i] == target) {
+    return i;
+  }
+  }
   return -1;
 }
 
